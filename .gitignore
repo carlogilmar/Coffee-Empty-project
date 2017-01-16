@@ -1,3 +1,5 @@
-/bower_components
-js/app.js
-js/main.js
+webroot/bower_components
+webroot/third-party
+webroot/js/app.js
+webroot/js/main.js
+
