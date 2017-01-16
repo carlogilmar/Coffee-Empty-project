@@ -20,12 +20,16 @@ class @.Manager
 
   start: ->
     console.log "Start on"
-    routes =
+    @routes =
       '/': @prueba()
       '/prueba1': @prueba1()
       '/prueba2': @prueba2()
       '/prueba3': @prueba3()
-    router = Router(routes)
+    @urlMappings()
+
+  urlMappings: ->
+    console.log "url mappings on"
+    router = Router(@routes)
     router.init()
 
   prueba: ->
