@@ -21,10 +21,10 @@ class @.Manager
   start: ->
     console.log "Start on"
     @routes =
-      '/': @prueba()
-      '/prueba1': @prueba1()
-      '/prueba2': @prueba2()
-      '/prueba3': @prueba3()
+      '/': @prueba
+      '/prueba1': @prueba1
+      '/prueba2': @prueba2
+      '/prueba3': @prueba3
     @urlMappings()
 
   urlMappings: ->
