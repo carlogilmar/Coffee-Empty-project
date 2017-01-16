@@ -13,3 +13,5 @@ router.route().handler(BodyHandler.create())
 router.route("/static/*").handler(
 	 StaticHandler.create().setCachingEnabled(false)
 )
+
+server.requestHandler(router.&accept).listen(8080)
