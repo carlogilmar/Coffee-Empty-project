@@ -1,0 +1,23 @@
+{
+  "name": "coffee",
+  "authors": [
+    "carlogilmar <carlogilmar12@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.97.8",
+    "director": "^1.2.8",
+    "handlebars": "^4.0.5"
+  }
+}
