@@ -34,6 +34,13 @@ class @.Manager
 
   prueba: ->
     alert "Prueba raiz"
+    source = $('#entry-template').html()
+    template = Handlebars.compile(source)
+    context =
+       title: 'Raiz'
+       body: 'This is my first post!'
+    html = template(context)
+    $("#index-banner").prepend(html)
 
   prueba1: ->
     alert "prueba 1"
@@ -43,3 +50,5 @@ class @.Manager
 
   prueba3: ->
     alert "prueba 3"
+
+
