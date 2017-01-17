@@ -40,15 +40,38 @@ class @.Manager
        title: 'Raiz'
        body: 'This is my first post!'
     html = template(context)
-    $("#index-banner").prepend(html)
+    $("#index-banner").html(html)
 
   prueba1: ->
     alert "prueba 1"
+    source = $('#entry-template').html()
+    template = Handlebars.compile(source)
+    context =
+       title: 'Prueba1'
+       body: 'Director redirigiendo a prueba 1'
+    html = template(context)
+    $("#index-banner").html(html)
+
 
   prueba2: ->
     alert "prueba 2"
+    source = $('#entry-template').html()
+    template = Handlebars.compile(source)
+    context =
+       title: 'Prueba 2'
+       body: 'Director redirigiendo a prueba 2'
+    html = template(context)
+    $("#index-banner").html(html)
+
 
   prueba3: ->
     alert "prueba 3"
+    source = $('#entry-template').html()
+    template = Handlebars.compile(source)
+    context =
+       title: 'Prueba 3'
+       body: 'Dirigiendo a prueba3'
+    html = template(context)
+    $("#index-banner").html(html)
 
 
