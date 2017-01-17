@@ -3,26 +3,30 @@
   <head>
     <meta charset="UTF-8">
     <title>Coffee Script First Project</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Lobster+Two|Poiret+One" rel="stylesheet">
     <link href="bower_components/materialize/dist/css/materialize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
     <script id="entry-template" type="text/x-handlebars-template">
         <div class="row">
             <div class="icon-block">
-              <h1 class="header center orange-text">Handlebars title: {{title}}</h1>
+              <h1 class="header center red-text lighten-2">Handlebars title: {{title}}</h1>
               <h5 class="center">HandleBars Mode On: {{body}}</h5>
             </div>
         </div>
     </script>
 
-    <nav class="light-blue lighten-1" role="navigation">
-      <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Coffee</a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#">Raiz</a></li>
-          <li><a href="#/prueba1">prueba1</a></li>
-          <li><a href="#/prueba2">prueba2</a></li>
-          <li><a href="#/prueba3">prueba3</a></li>
+    <nav class="white" role="navigation">
+      <div class="nav-wrapper container">
+        <span class="brand-logo black-text cursive"><b>Emailer App</span>
+        <ul class="right black-text font">
+          <li><a href="#"><i class="material-icons right">grade</i>Inicio</a></li>
+          <li><a href="#/prueba1"><i class="material-icons right">mode_edit</i>Nuevo Emailer</a></li>
+          <li><a href="#/prueba2"><i class="material-icons right">library_books</i>Almacén de Emailers</a></li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
@@ -31,25 +35,42 @@
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       </div>
     </nav>
-    <div class="section no-pad-bot" id="index-banner">
+   <div class="white" id="content-body">
+
+     <div class="section no-pad-bot" id="index-banner">
       <div class="container">
         <br><br>
-        <h1 class="header center orange-text">Coffee Script</h1>
+        <h1 class="header center red-text lighten-2">Coffee Script Index Banner for play with handlebars</h1>
         <div class="row center">
           <h5 class="header col s12 light">Integración de DirectorJS, y Handlebars</h5><br>
           </br>
-          <a class="btn waves-effect waves-light" id="submitEvent">View Trello
           </a></br>
-          <div class="input-field col s6">
-            <input placeholder="Placeholder" id="trelloCard" type="text" class="validate">
-            <label for="first_name">Nombre de tarjeta de Trello</label>
-          </div>
         </div>
         <br><br>
 
       </div>
     </div>
 
+    <div class="container">
+      <div class="row">
+        <h1 class="center brand-logo red-text lighten-2 cursive">Nuevo Emailer</h1>
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">email</i>
+              <input id="icon_prefix" type="text" class="validate">
+              <label for="icon_prefix">Título de Emailer</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">mode_edit</i>
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1">Contenido</label>
+            </div>
+          </div>
+          <a class="center waves-effect waves-light btn">Añadir</a>
+        </form>
+      </div>
+   </div>
 
     <div class="container">
       <div class="section">
@@ -63,31 +84,15 @@
 
       </div>
       <br><br>
-
-      <div class="section">
-
-      </div>
     </div>
-
-    <footer class="page-footer orange">
+    </div>
+    <footer class="page-footer light-blue darken-4">
       <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Company Bio</h5>
-            <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-
-
-          </div>
-
-        </div>
+        <p class="grey-text text-lighten-4 center">Making Devs, 2017</p><br>
       </div>
-      <div class="footer-copyright">
-        <div class="container">
-          Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-        </div>
-      </div>
+     </div>
     </footer>
-
+   </div>
 
     <script type="text/javascript" src="bower_components/director/build/director.min.js"></script>
     <script type="text/javascript" src="bower_components/handlebars/handlebars.js"></script>
