@@ -11,46 +11,7 @@
   </head>
 
   <body>
-    <script id="entry-template" type="text/x-handlebars-template">
-        <div class="row">
-            <div class="icon-block">
-              <h1 class="header center red-text lighten-2">Handlebars title: {{title}}</h1>
-              <h5 class="center">HandleBars Mode On: {{body}}</h5>
-            </div>
-        </div>
-    </script>
-
-    <nav class="white" role="navigation">
-      <div class="nav-wrapper container">
-        <span class="brand-logo black-text cursive"><b>Emailer App</span>
-        <ul class="right black-text font">
-          <li><a href="#"><i class="material-icons right">grade</i>Inicio</a></li>
-          <li><a href="#/prueba1"><i class="material-icons right">mode_edit</i>Nuevo Emailer</a></li>
-          <li><a href="#/prueba2"><i class="material-icons right">library_books</i>Almacén de Emailers</a></li>
-        </ul>
-
-        <ul id="nav-mobile" class="side-nav">
-          <li><a href="#">Navbar Link2</a></li>
-        </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-      </div>
-    </nav>
-   <div class="white" id="content-body">
-
-     <div class="section no-pad-bot" id="index-banner">
-      <div class="container">
-        <br><br>
-        <h1 class="header center red-text lighten-2">Coffee Script Index Banner for play with handlebars</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">Integración de DirectorJS, y Handlebars</h5><br>
-          </br>
-          </a></br>
-        </div>
-        <br><br>
-
-      </div>
-    </div>
-
+    <script id="new-emailer" type="text/x-handlebars-template">
     <div class="container">
       <div class="row">
         <h1 class="center brand-logo red-text lighten-2 cursive">Nuevo Emailer</h1>
@@ -70,28 +31,149 @@
           <a class="center waves-effect waves-light btn">Añadir</a>
         </form>
       </div>
-   </div>
+     </div>
+    </script>
 
-    <div class="container">
-      <div class="section">
+    <script id="read-emailer" type="text/x-handlebars-template">
+    <div id="centered" class="section scrollspy">
+      <div class="row">
+        <h1 class="center brand-logo red-text lighten-2 cursive">Nuevo Emailer</h1>
+       <div class="col s10 offset-s1">
+        <table class="centered highlight">
+        <thead>
+        <tr>
+        <th data-field="id">#</th>
+        <th data-field="name">ID</th>
+        <th data-field="price">Title</th>
+        <th data-field="price">Version</th>
+        <th data-field="price">Preview</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>1</td>
+        <td>7625362853263</td>
+        <td>Emailer Version One</td>
+        <td>1</td>
+        <td>Button</td>
+        </tr>
+        <tr>
+        <td>2</td>
+        <td>7fewe623263</td>
+        <td>Emailer Version Two</td>
+        <td>1</td>
+        <td>Button</td>
+        </tr>
+        </tbody>
+        </table>
+       </div>
+     </div>
 
-        <div class="row">
-            <div class="icon-block">
-              <h5 class="center">User Experience Focused</h5>
-              <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-            </div>
-        </div>
+    </script>
 
+    <script id="start-emailer" type="text/x-handlebars-template">
+        <div class="container">
+         <br><br>
+         <h1 class="header center red-text lighten-2">Emailer App</h1>
+         <div class="row center">
+          <h5 class="header col s12 light font">Cómo Funciona</h5>
+         </div>
+
+         <div class="row">
+           <div class="col s12 m4">
+             <div class="icon-block">
+               <h2 class="center light-blue-text darken-4"><i class="medium material-icons">markunread_mailbox</i></h2>
+               <h5 class="center font">Aplicación Web</h5>
+               <p class="light">Ingresa </p>
+             </div>
+           </div>
+
+           <div class="col s12 m4">
+             <div class="icon-block">
+               <h2 class="center light-blue-text darken-4 "><i class="medium material-icons">import_export</i></h2>
+               <h5 class="center font">Servicio REST</h5>
+
+               <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+             </div>
+           </div>
+
+           <div class="col s12 m4">
+             <div class="icon-block">
+               <h2 class="center blue-text darken-4"><i class="medium material-icons">http</i></h2>
+               <h5 class="center font">Status</h5>
+
+               <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+             </div>
+           </div>
+         </div>
+         </div>
+    </script>
+
+    <nav class="white" role="navigation">
+      <div class="nav-wrapper container">
+        <span class="brand-logo black-text cursive"><b>Emailer App</span>
+        <ul class="right black-text font">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#/prueba1"><i class="material-icons right">mode_edit</i>Nuevo Emailer</a></li>
+          <li><a href="#/prueba2"><i class="material-icons right">library_books</i>Almacén de Emailers</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="#">Navbar Link2</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       </div>
-      <br><br>
+    </nav>
+   <div class="white" id="content-body">
+
+     <div class="section no-pad-bot" id="index-banner">
+       <div class="container">
+         <br><br>
+         <h1 class="header center red-text lighten-2">Emailer App</h1>
+         <div class="row center">
+          <h5 class="header col s12 light font">Versión 2 Enero,2017.</h5>
+         </div>
+         <div class="row">
+           <div class="col s12 m4">
+             <div class="icon-block">
+               <h2 class="center red-text lighten-2"><i class="medium material-icons">grade</i></h2>
+               <h5 class="center font">Aprende cómo funciona</h5>
+
+               <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+             </div>
+           </div>
+
+           <div class="col s12 m4">
+             <div class="icon-block">
+               <h2 class="center red-text lighten-2"><i class="medium material-icons">mode_edit</i></h2>
+               <h5 class="center font">Agrega un Emailer</h5>
+
+               <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+             </div>
+           </div>
+
+           <div class="col s12 m4">
+             <div class="icon-block">
+               <h2 class="center red-text lighten-2"><i class="medium material-icons">library_books</i></h2>
+               <h5 class="center font">Revisa el Almacén de Emailers</h5>
+
+               <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+             </div>
+           </div>
+         </div>
+
+        <br><br>
+      </div>
     </div>
     </div>
+
     <footer class="page-footer light-blue darken-4">
       <div class="container">
         <p class="grey-text text-lighten-4 center">Making Devs, 2017</p><br>
       </div>
      </div>
     </footer>
+
    </div>
 
     <script type="text/javascript" src="bower_components/director/build/director.min.js"></script>
