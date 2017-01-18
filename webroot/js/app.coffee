@@ -24,7 +24,6 @@ class @.Manager
       '/': @prueba
       '/prueba1': @prueba1
       '/prueba2': @prueba2
-      '/prueba3': @prueba3
     @urlMappings()
 
   urlMappings: ->
@@ -33,8 +32,7 @@ class @.Manager
     router.init()
 
   prueba: ->
-    alert "Prueba raiz"
-    source = $('#entry-template').html()
+    source = $('#start-emailer').html()
     template = Handlebars.compile(source)
     context =
        title: 'Raiz'
@@ -43,8 +41,7 @@ class @.Manager
     $("#index-banner").html(html)
 
   prueba1: ->
-    alert "prueba 1"
-    source = $('#entry-template').html()
+    source = $('#new-emailer').html()
     template = Handlebars.compile(source)
     context =
        title: 'Prueba1'
@@ -54,23 +51,11 @@ class @.Manager
 
 
   prueba2: ->
-    alert "prueba 2"
-    source = $('#entry-template').html()
+    source = $('#read-emailer').html()
     template = Handlebars.compile(source)
     context =
        title: 'Prueba 2'
        body: 'Director redirigiendo a prueba 2'
-    html = template(context)
-    $("#index-banner").html(html)
-
-
-  prueba3: ->
-    alert "prueba 3"
-    source = $('#entry-template').html()
-    template = Handlebars.compile(source)
-    context =
-       title: 'Prueba 3'
-       body: 'Dirigiendo a prueba3'
     html = template(context)
     $("#index-banner").html(html)
 
