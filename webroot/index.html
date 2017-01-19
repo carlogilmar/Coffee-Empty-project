@@ -22,11 +22,11 @@
               <input id="icon_prefix" type="text" class="validate">
               <label for="icon_prefix">Título de Emailer</label>
             </div>
-            <div class="input-field col s12">
               <i class="material-icons prefix">mode_edit</i>
-              <textarea id="textarea1" class="materialize-textarea"></textarea>
-              <label for="textarea1">Contenido</label>
-            </div>
+              <label>* A continuación redacta el contenido del emailer, asignado un parámetro con la siguiente forma: $ { { param } }</label>
+              <br/>
+              <br/>
+              <textarea id="textarea1"></textarea>
           </div>
           <a class="center waves-effect waves-light btn">Añadir</a>
         </form>
@@ -37,7 +37,7 @@
     <script id="read-emailer" type="text/x-handlebars-template">
     <div id="centered" class="section scrollspy">
       <div class="row">
-        <h1 class="center brand-logo red-text lighten-2 cursive">Nuevo Emailer</h1>
+        <h1 class="center brand-logo red-text lighten-2 cursive">Almacén de Emailers</h1>
        <div class="col s10 offset-s1">
         <table class="centered highlight">
         <thead>
@@ -122,13 +122,6 @@
 
          <div class="row grey lighten-4">
          <pre><code>
-         Emailer App
-         ID: 3eui3r2370yg32ryg08g
-         Content:
-                  Hey! Les comunico el siguiente aviso: $\{{mensaje}}
-                  Agradecido, $\{{despedida}}.
-                                                          Atentamente $\{{firma}}
-         <hr>
          Request: /serviceEmail
          Method: POST
          Body: JSON
@@ -221,6 +214,7 @@
     <script type="text/javascript" src="bower_components/handlebars/handlebars.js"></script>
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="bower_components/materialize/dist/js/materialize.js"></script>
+    <script type="text/javascript" src="bower_components/tinymce/tinymce.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/prueba.js"></script>

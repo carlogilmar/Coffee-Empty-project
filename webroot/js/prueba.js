@@ -27,3 +27,8 @@ var routes = {
 var router = Router(routes);
 router.init();
 */
+console.log("tiny");
+tinymce.init({
+      selector: "textarea",
+          themes: "modern"
+});
