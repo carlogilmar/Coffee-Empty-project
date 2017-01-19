@@ -84,7 +84,7 @@
              <div class="icon-block">
                <h2 class="center light-blue-text darken-4"><i class="medium material-icons">markunread_mailbox</i></h2>
                <h5 class="center font">Aplicación Web</h5>
-               <p class="light">Ingresa </p>
+               <p class="light">Ingresa y agrega un emailer nuevo, consulta los emailers anteriores, y haz una prueba de envío. Para su implementación con otra aplicación consulte a su Web Master. </p>
              </div>
            </div>
 
@@ -93,8 +93,14 @@
                <h2 class="center light-blue-text darken-4 "><i class="medium material-icons">import_export</i></h2>
                <h5 class="center font">Servicio REST</h5>
 
-               <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-             </div>
+               <p class="light">El servicio alojado en <b> http://localhost:8000/serviceEmail </b> y requiere de una petición POST con los siguientes parámetros:</p>
+                 <div class="chip">Id</div> Identificador del emailer. REQUERIDO<br>
+                 <div class="chip">To</div> Email para enviar el correo. REQUERIDO<br>
+                 <div class="chip">CC</div> Email para enviar copia. OPCIONAL<br>
+                 <div class="chip">CCO</div> Email para enviar copia oculta. OPCIONAL<br>
+                 <div class="chip">Subject</div> Asunto del correo. REQUERIDO<br>
+                 <div class="chip">Params</div> Parámetros del emailer. REQUERIDO
+               </div>
            </div>
 
            <div class="col s12 m4">
@@ -102,9 +108,44 @@
                <h2 class="center blue-text darken-4"><i class="medium material-icons">http</i></h2>
                <h5 class="center font">Status</h5>
 
-               <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+               <p class="light">El servicio puede responder a las peticiones los siguientes mensajes, dependiendo el caso:</p>
+                 <div class="chip">201</div>Solicitud exitosa: "Solicitud enviada correctamente"<br>
+                 <div class="chip">400</div>Solicitud sin parámetros: "I can't do my job, please send me something please"<br>
+                 <div class="chip">400</div>Solicitud sin los parámetros necesarios: "I can't do my job. You have the follow errors"<br>
              </div>
            </div>
+         </div>
+
+         <div class="row center">
+          <h5 class="header col s12 light font">Ejemplo</h5>
+         </div>
+
+         <div class="row grey lighten-4">
+         <pre><code>
+         Emailer App
+         ID: 3eui3r2370yg32ryg08g
+         Content:
+                  Hey! Les comunico el siguiente aviso: $\{{mensaje}}
+                  Agradecido, $\{{despedida}}.
+                                                          Atentamente $\{{firma}}
+         <hr>
+         Request: /serviceEmail
+         Method: POST
+         Body: JSON
+         Content:
+         {
+          "id":"3eui3r2370yg32ryg08g",
+          "to":"emailer@app.com",
+          "cc":"emailer1@app.com",
+          "cco":"emailer2@app.com",
+          "subject":"envio con todos los parametros",
+          "params":{
+            "mensaje":"Hola a todos",
+            "despedida":"Adios",
+            "firma":"Making Devs, 2017"
+          }
+         }
+         </code></pre>
          </div>
          </div>
     </script>
